@@ -87,7 +87,7 @@ void calculer_afficher_solutions( double a, double b, double c, int nb_sol,
     case 2 :
         rac = sqrt(delta) ;
         x1 = (-b-rac)/(2.*a);
-        x2 = (-b-rac)/(2.*a);
+        x2 = (-b+rac)/(2.*a);
         printf("\n Solution 1 : %lf", x1 ) ;
         printf("\n Solution 2 : %lf\n", x2 ) ;
         break ;
