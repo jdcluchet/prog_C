@@ -50,7 +50,7 @@ P_FICHIER = fopen(NOM_FICHIER, "r+");
 }
 i=0;
 while (i < C) {
-       printf ("%.2f  ",x[i]);
+       printf ("%.2f  \t",x[i]);
        i++; }
        printf("\n");
     printf("%s%d\n","nombre de lignes:   ",C) ;
