@@ -4,7 +4,7 @@
 int main()
 {
     FILE *P_FICHIER; /* pointeur sur FILE */
-    char NOM_FICHIER[30],  NOM_PERS[30], NOMBRE[5], ligne[40]="xxx",preced[40];
+    char NOM_FICHIER[30],  NOM_PERS[30], NOMBRE[30], ligne[40]="xxx",preced[40];
     int  C,NB_ENREG;
 
     /* Première partie : 
@@ -37,7 +37,7 @@ P_FICHIER = fopen(NOM_FICHIER, "r+");
             printf("%s", ligne);
         C++;
 }   
-    printf("%s%d\n","nombre de lignes:   ",C-1) ;
+    printf("%s%d\n","nombre de lignes:   ",C) ;
     fclose(P_FICHIER);
     return 0;
 } 
