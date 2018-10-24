@@ -37,7 +37,8 @@ int main(int argc, char **argv)
 		while( token != NULL ) {
 			
 			//printf( " %s\n", token );
-			ptr[j] = token;
+			ptr[j] = malloc(sizeof(char) * strlen(token));
+			strcpy(ptr[j], token);
 			token = strtok(NULL, s);
 			j++;
 		}
@@ -49,7 +50,7 @@ int main(int argc, char **argv)
 
 	i=0;
 	while (i < C) {
-		printf("\nFullfile:\n");
+		printf("\nFullfile case [%d]:\n",i);
 		printf("Case [0]: %s\n",fullfile[i][0]);
 		printf("Case [1]: %s\n",fullfile[i][1]);
 		printf("Case [2]: %s\n",fullfile[i][2]);
