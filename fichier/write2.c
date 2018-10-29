@@ -28,11 +28,11 @@ strcpy(ligne,"xxx");
     while (C<nb_enreg)
     { 
 	printf("Les termes à entrer (suivis de *collé) et le nombre avec un espace: ");
-	scanf("%s%s%s", mot,mots,nombre);
-        fprintf(P_FICHIER, "%s", mot);
-       fprintf(P_FICHIER, "%s", mots);
-        fprintf(P_FICHIER,"%c",32);fprintf(P_FICHIER,"%c",32);
-        fprintf(P_FICHIER, "%s\n",  nombre);
+	scanf("%s", mot);
+        fprintf(P_FICHIER, "%s\n", mot);
+       	//fprintf(P_FICHIER, "%s", mots);
+        //fprintf(P_FICHIER,"%c",32);fprintf(P_FICHIER,"%c",32);
+        //fprintf(P_FICHIER, "%s\n",  nombre);
 	C++;
     }
     fclose(P_FICHIER);
@@ -49,10 +49,11 @@ P_FICHIER = fopen(nom_fichier, "r+");
       if( strcmp (ligne,preced) == 0) break;
 
 /*---------------------*/
- ret = strchr(ligne ,s);
+// ret = strchr(ligne ,s);
  rite = strtok(ligne,t);
 
  rit = strtok(NULL,"*");
+ ret = strtok(NULL,"*");
 
  result[C]= atof(ret);
 /* x= strlen(rite);*/
