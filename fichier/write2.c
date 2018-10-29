@@ -53,7 +53,7 @@ P_FICHIER = fopen(nom_fichier, "r+");
  rite = strtok(ligne,t);
 
  rit = strtok(NULL,"*");
- ret = strtok(NULL,"*");
+ ret = strtok(NULL,"-");
 
  result[C]= atof(ret);
 /* x= strlen(rite);*/
